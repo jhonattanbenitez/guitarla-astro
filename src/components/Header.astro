@@ -1,5 +1,6 @@
 ---
 import logo from '../img/logo.svg';
+const pathName = Astro.url.pathname
 ---
 
 <header class="header">
@@ -8,17 +9,17 @@ import logo from '../img/logo.svg';
       <img src={logo} alt="logo image" />
     </a>
     <nav class="nav">
-      <a href="/">Home</a>
-      <a href="/about-us">About Us</a>
-      <a href="/store">Store</a>
-      <a href="/blog">Blog</a>
+      <a href="/" class={pathName === "/" ? 'active' : ''} >Home</a>
+      <a href="/about-us" class={pathName === "/about-us" ? 'active' : ''}>About Us</a>
+      <a href="/store" class={pathName === "/store" ? 'active' : ''}>Store</a>
+      <a href="/blog" class={pathName === "/blog" ? 'active' : ''}>Blog</a>
     </nav>
   </div>
 </header>
 <style>
   .header {
     background-image: linear-gradient(
-        to right,
+        to right, 
         rgb(0 0 0 / 0.8),
         rgb(0 0 0 / 0.7)
       ),
