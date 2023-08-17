@@ -1,17 +1,50 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import about from  '../img/about-us.jpg';
+import about from '../img/about-us.jpg';
 ---
 
-<Layout title="About Us" description="Home of the GuitarLA Store, music instruments">
-	<main class="container">
-		<h1 class="heading">About Us</h1>
+<Layout
+    title="About Us"
+    description="Home of the GuitarLA Store, music instruments"
+>
+    <main class="container">
+        <h1 class="heading">About Us</h1>
         <div class="content">
-            <img src={about} alt="about us">
+            <img src={about} alt="about us" />
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Commodi odit harum architecto esse cum, adipisci dolor
+                    libero eius aliquam unde labore cumque quaerat dolorem,
+                    officiis natus dolorum ipsum eaque fugit.
+                </p>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Dignissimos veniam consectetur officia quod consequuntur
+                    aspernatur incidunt, assumenda consequatur voluptatem, sequi
+                    corporis fugiat facere dolorem repudiandae expedita numquam
+                    possimus porro doloremque.
+                </p>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut
+                    ipsa ducimus nulla facilis nam. Distinctio ratione nemo
+                    commodi id beatae sint voluptatem, repellendus, non
+                    inventore quibusdam aliquid nam consequatur quo.
+                </p>
+            </div>
         </div>
-	</main>
+    </main>
 </Layout>
 
 <style>
-	
+    .content {
+        display: grid;
+        gap: 4rem;
+    }
+    @media (min-width: 768px) {
+        .content {
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+        }
+    }
 </style>
